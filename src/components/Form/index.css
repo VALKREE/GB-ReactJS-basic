@@ -1,0 +1,24 @@
+.form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px; }
+  .form_text {
+    height: 26px;
+    width: 200px;
+    padding: 0.3rem; }
+  .form_submit {
+    padding: 0.3rem;
+    border-radius: 20px;
+    border: 1px solid #000;
+    background-color: #91B0FF;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    cursor: pointer; }
+    .form_submit:hover {
+      background-color: #99f0ff;
+      color: #000;
+      border: 1px solid #fff; }
+
+/*# sourceMappingURL=index.css.map */
