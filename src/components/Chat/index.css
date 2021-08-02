@@ -1,18 +1,3 @@
-.chat {
-  margin: 0.3rem;
-  border: 1px solid pink;
-  display: flex;
-  flex-direction: column;
-  text-align: left; }
-  .chat_heading {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0.3rem; }
-  .chat_info {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0.3rem; }
+
 
 /*# sourceMappingURL=index.css.map */

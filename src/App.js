@@ -11,12 +11,19 @@ function App(){
     const [chats, setChats] = useState(
         [
             {
-                chatId: 0, 
-                chatName: "Какой-то чат", 
+                chatId: Date.now() + 0, 
+                chatName: "Какой-то чат 1", 
                 chatDate: "01.01.2021", 
                 chatLastMessage: "Последнее сообщение", 
                 chatCountLastMessage: 3,
-            }
+            },
+            {
+                chatId: Date.now() + 1, 
+                chatName: "Какой-то чат 2", 
+                chatDate: "01.01.2021", 
+                chatLastMessage: "Последнее сообщение", 
+                chatCountLastMessage: 2,
+            },
         ]
     )
     const handlerChats = useCallback((newChat) => {
@@ -28,7 +35,7 @@ function App(){
             {
                 text: 'Welcome to chat!', 
                 author: "Chat", 
-                id: 0,
+                id: Date.now(),
             }
         ]
     );
@@ -48,13 +55,14 @@ function App(){
         const timeout = setTimeout(()=>{
             if (!messages.length || messages[messages.length - 1].author === "AI: Alex"){
                 return;
-            }
-            const newMessage = {
+            } 
+            let newMessage = {
                 author: "AI: Alex",
                 text: "Hello! I'm Alex!",
-                id: 1,
+                id: "AI_Alex" + Date.now(),
             }
             setMessages([...messages, newMessage]);
+            
         }, 1000);
         return () => clearTimeout(timeout);
     }, [messages])
@@ -66,7 +74,7 @@ function App(){
                     <Chats chats={chats}/>
                 </div>
                 <div className="app_messenger-chat">
-                    <MessageList messages={messages} />
+                    <div className="app_messenger-messageList"><MessageList messages={messages} /></div>
                     <Form onSendMessage={handlerSending} />
                 </div>
             </div>
