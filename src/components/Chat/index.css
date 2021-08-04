@@ -1,0 +1,16 @@
+.chat {
+  border: 2px solid #000;
+  padding: 0.3rem !important;
+  cursor: pointer;
+  transition: border 0.2s linear; }
+  .chat:hover {
+    border: 2px solid #656565;
+    transition: border 0.2s linear; }
+
+.MuiList-root {
+  transition: background 0.2s linear; }
+  .MuiList-root:hover {
+    transition: background 0.2s linear;
+    background: rgba(255, 255, 255, 0.6); }
+
+/*# sourceMappingURL=index.css.map */

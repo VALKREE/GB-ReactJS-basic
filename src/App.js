@@ -1,20 +1,18 @@
-import {Message} from "./components/Message/Message"
-
+import React from 'react';
+import {useRef, useEffect, useState, useCallback} from 'react';
+import { TextField } from "@material-ui/core";
 import './App.sass';
 
-const myMessage = 'This is a message';
+import {Router} from './components/Router';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          <Message name="Какое-то сообщение"/>
-        </p>
-      </header>
-      
-    </div>
-  );
+function App(){
+    
+    return (
+        <div className="app">
+           <Router/>
+        </div>
+    );
 }
+
 
 export default App;
