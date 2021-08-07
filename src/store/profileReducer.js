@@ -3,7 +3,7 @@ import { PROFILE_TOGGLE_SHOW, PROFILE_DROP_NAME, PROFILE_SAVE_VALUE } from "./ac
 const initialState = {
   show: false,
   name: 'No name',
-  cheked: false,
+  checked: false,
 };
 
 export const profileReducer = (state = initialState, action) => {
@@ -23,7 +23,7 @@ export const profileReducer = (state = initialState, action) => {
     case PROFILE_SAVE_VALUE: {
       return {
         ...state,
-        cheked: !state.cheked,
+        checked: !state.checked,
       }
     }
     default:

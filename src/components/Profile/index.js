@@ -13,7 +13,7 @@ export const Profile = () => {
     });
   };
 
-  const saveValue = (e) => {
+  const saveValue = () => {
     dispatch({
       type: PROFILE_SAVE_VALUE,
     });
@@ -23,12 +23,17 @@ export const Profile = () => {
     <>
       <h2>THIS IS PROFILE</h2>
       <button onClick={toggleShow}>TOGGLE show</button>
-      {profileState.show && <div>THIS DEPENDS ON GLOBAL REDUX STATE</div>}
+      {
+        profileState.show && <div>THIS DEPENDS ON GLOBAL REDUX STATE</div>
+      }
 
       <input
         type="checkbox"
         onClick={saveValue}
       />
+      {
+        profileState.checked && <div>Checked</div>
+      }
     </>
   );
 };
