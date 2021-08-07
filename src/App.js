@@ -1,18 +1,13 @@
-import React from 'react';
-import {useRef, useEffect, useState, useCallback} from 'react';
-import { TextField } from "@material-ui/core";
-import './App.sass';
+import { Provider } from "react-redux";
+import { Router } from "./components/Router";
+import { store } from "./store";
 
-import {Router} from './components/Router';
-
-function App(){
-    
-    return (
-        <div className="app">
-           <Router/>
-        </div>
-    );
+function App() {
+  return (
+    <Provider store={store}>
+      <Router />
+    </Provider>
+  );
 }
-
 
 export default App;
