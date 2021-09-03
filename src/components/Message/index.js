@@ -1,10 +1,18 @@
 import React, { useContext } from "react";
-import { usePrev } from "../../utils";
 import { ThemeContext } from "../../utils/ThemeContext";
 
+import { makeStyles } from "@material-ui/core";
+const useStyles = makeStyles({
+  message:{
+    padding: ".3rem",
+    border: "1px solid #000",
+  },
+});
+
 export const MessageDef = ({ text, author, theme }) => {
+  const classes = useStyles();
   return (
-    <div style={{ backgroundColor: theme.theme }}>
+    <div className={classes.message}>
       {author}: {text}
     </div>
   );
