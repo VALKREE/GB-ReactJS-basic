@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useSelector, useDispatch, connect } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { changeName } from "../../store/profile/actions";
 import { selectName } from "../../store/profile/selectors";
 

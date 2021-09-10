@@ -5,6 +5,7 @@ import Chat from "../Chat";
 import { ThemeContext } from "../../utils/ThemeContext";
 import {Home} from "../Home";
 import { makeStyles, AppBar, List, ListItem } from '@material-ui/core';
+import {Animals} from "../Animals";
 
 const useStyles = makeStyles({
   AppBar: {
@@ -74,6 +75,9 @@ export const Router = () => {
               <Link to="/chat" className={classes.NavLink}>ЧАТ</Link>
             </ListItem>
             <ListItem>
+              <Link to="/animals" className={classes.NavLink}>ЖИВОТНЫЕ</Link>
+            </ListItem>
+            <ListItem>
               <Link to="/profile" className={classes.NavLink}>ПРОФИЛЬ</Link>
             </ListItem>
           </List>
@@ -86,6 +90,9 @@ export const Router = () => {
             ></Route>
             <Route path="/chat/:chatId?">
               <Chat />
+            </Route>
+            <Route path="/animals">
+              <Animals />
             </Route>
             <Route path="/" exact>
               <Home />
@@ -102,6 +109,9 @@ export const Router = () => {
             </ListItem>
             <ListItem>
               <Link to="/chat" className={classes.NavLink}>ЧАТ</Link>
+            </ListItem>
+            <ListItem>
+              <Link to="/animals" className={classes.NavLink}>Животные</Link>
             </ListItem>
             <ListItem>
               <Link to="/profile" className={classes.NavLink}>ПРОФИЛЬ</Link>
