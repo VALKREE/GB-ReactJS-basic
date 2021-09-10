@@ -1,19 +1,15 @@
-import {Message} from "./components/Message/Message"
-
-import './App.sass';
-
-const myMessage = 'This is a message';
+import { Provider } from "react-redux";
+import { Router } from "./components/Router";
+import { store,persistor } from "./store";
+import { PersistGate } from "redux-persist/integration/react";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          <Message name="Какое-то сообщение"/>
-        </p>
-      </header>
-      
-    </div>
+    <Provider store={store}>
+        <PersistGate persistor={persistor}>
+            <Router />
+        </PersistGate>
+    </Provider>
   );
 }
 
